@@ -312,6 +312,7 @@ function AdminDashboard({ user, onLogout }) {
   const [toastMessage, setToastMessage] = useState("");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [dbStats, setDbStats] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
