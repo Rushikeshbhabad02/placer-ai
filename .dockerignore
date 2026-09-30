@@ -1,0 +1,28 @@
+# Git & IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Node / React Frontend build
+node_modules
+build
+coverage
+
+# Python Bytecode & Cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+
+# Environment & Secrets
+.env
+*.env
+*.pem
+
+# Local databases & uploads
+*.db
+backend/*.db
+backend/uploads/
+backend/data/chroma/

@@ -1,0 +1,558 @@
+@import "./dashboard.css";
+
+/* Premium theme overrides for the Admin Portal */
+.admin-theme {
+  --primary: #4f46e5; /* Royal Premium Indigo */
+  --primary-dark: #3730a3;
+  --primary-light: #818cf8;
+  --secondary: #0ea5e9; /* Professional Cyan */
+  --secondary-light: #38bdf8;
+  --admin-dark-bg: #070b19; /* Ultra-deep premium dark background */
+}
+
+/* Prevent viewport scroll on large screens */
+@media (min-width: 1025px) {
+  .admin-theme.onboarding-split-container {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  .admin-theme .onboarding-left {
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 60px;
+  }
+
+  .admin-theme .onboarding-right {
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+}
+
+/* Left Section Theme Overrides */
+.admin-theme .onboarding-left {
+  background: var(--admin-dark-bg);
+  box-shadow: inset -30px 0 60px rgba(0, 0, 0, 0.4);
+}
+
+.admin-theme .admin-left-title {
+  font-size: 13px;
+  font-weight: 850;
+  color: var(--primary-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.admin-theme .admin-left-subtitle {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin-theme .branding-subtext {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 440px;
+}
+
+.admin-theme .branding-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.admin-theme .feature-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.admin-theme .feature-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(79, 70, 229, 0.12);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  color: var(--primary-light);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.25));
+}
+
+/* Glass Statistics Cards Override */
+.admin-theme .branding-stats-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.admin-theme .stats-glass-card {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.admin-theme .stats-glass-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 40px rgba(79, 70, 229, 0.2);
+}
+
+.admin-theme .stats-glass-card strong {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 850;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.admin-theme .stats-glass-card span {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Right Section Overrides & Tuning */
+.admin-theme .onboarding-form-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin: auto 0;
+}
+
+.admin-theme .onboarding-card {
+  padding: 36px;
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.04);
+}
+
+/* Back Button alignment and hover style */
+.admin-theme .back-to-portal-btn {
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  font-size: 13px;
+}
+
+/* Forms layout adjustment */
+.admin-theme .onboarding-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-theme .onboarding-header h2 {
+  font-size: 24px;
+  font-weight: 850;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.admin-theme .onboarding-header p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.admin-theme .auth-mode-tabs {
+  margin-bottom: 24px;
+  gap: 28px;
+  justify-content: center;
+  border-bottom: 1.5px solid #f1f5f9;
+}
+
+.admin-theme .auth-mode-tabs button {
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+/* Forms general input controls validation spacing */
+.admin-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.admin-theme .form-group label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.admin-theme .input-with-icon input,
+.admin-theme .form-group select {
+  height: 52px;
+  padding: 12px 16px 12px 46px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.admin-theme .input-with-icon svg {
+  font-size: 16px;
+  left: 16px;
+}
+
+/* Buttons and Options Row */
+.admin-theme .auth-primary-btn {
+  height: 52px;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.18);
+  margin-top: 6px;
+}
+
+.admin-theme .auth-primary-btn:hover {
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.25);
+}
+
+.admin-theme .auth-secondary-btn {
+  height: 52px;
+  border-radius: 12px;
+}
+
+.admin-theme .auth-options-row {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.admin-theme .remember-me {
+  font-size: 13px;
+}
+
+.admin-theme .text-link {
+  font-size: 13px;
+  font-weight: 750;
+}
+
+/* Stepper styles */
+.admin-theme .stepper-container {
+  margin-bottom: 32px;
+}
+
+.admin-theme .stepper-bar {
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+}
+
+.admin-theme .steps-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-theme .step-node {
+  gap: 6px;
+}
+
+.admin-theme .node-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  border-width: 3px;
+}
+
+.admin-theme .step-node span {
+  font-size: 10.5px;
+}
+
+/* Profile Photo Upload Layout */
+.profile-photo-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.profile-photo-uploader .photo-preview-box {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 3.5px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  color: #cbd5e1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-photo-uploader .photo-preview-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.15);
+}
+
+.photo-uploader-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.photo-action-btn {
+  height: 32px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 750;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.photo-action-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.photo-action-btn.danger {
+  color: #ef4444;
+  border-color: #fee2e2;
+  background: #fef2f2;
+}
+
+.photo-action-btn.danger:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+/* Security Group Indicator */
+.admin-theme .auth-security-group {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: rgba(34, 197, 94, 0.03);
+  border: 1px dashed rgba(34, 197, 94, 0.18);
+  border-radius: 10px;
+}
+
+/* Verification details step layout */
+.admin-verification-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: rgba(79, 70, 229, 0.04);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-verification-card svg {
+  font-size: 24px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.admin-verification-card strong {
+  display: block;
+  font-size: 13.5px;
+  color: #1e1b4b;
+  margin-bottom: 2px;
+}
+
+.admin-verification-card p {
+  font-size: 11.5px;
+  color: #4f46e5;
+  margin: 0;
+}
+
+.admin-review-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 18px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-review-grid span {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.admin-review-grid strong {
+  font-size: 12.5px;
+  color: #0f172a;
+  font-weight: 750;
+}
+
+/* Validation error labels positioning and animation */
+.validation-error-text {
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+  margin-bottom: 0;
+  animation: slide-down-fade-error 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.validation-error-text.center {
+  text-align: center;
+}
+
+@keyframes slide-down-fade-error {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Password Eye Button Alignment fix */
+.pass-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.25s;
+  padding: 0;
+  margin: 0;
+}
+
+.pass-toggle:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* Extra right padding on passwords to prevent text overflow behind eye icon */
+.input-with-icon input[type="password"] {
+  padding-right: 48px !important;
+}
+
+/* Custom form grid columns */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Form group wrapper when no icon is present */
+.form-group-input-wrap {
+  width: 100%;
+}
+
+.form-group-input-wrap input,
+.form-group-input-wrap select {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 14px;
+  height: 52px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group-input-wrap input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+}
+
+/* Responsive configurations */
+@media (max-width: 1024px) {
+  .admin-theme.onboarding-split-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .admin-theme .onboarding-left {
+    padding: 40px 24px;
+    flex: 0 0 auto;
+  }
+
+  .admin-theme .onboarding-right {
+    padding: 24px 16px;
+    flex: 1 0 auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .admin-theme .onboarding-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+  
+  .admin-theme .back-to-portal-btn {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-theme .branding-stats-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .admin-theme .stats-glass-card {
+    padding: 16px;
+  }
+
+  .admin-theme .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .admin-theme .steps-row span {
+    display: none;
+  }
+}

@@ -1,0 +1,635 @@
+@import "./dashboard.css";
+
+/* Premium theme overrides for the Recruiter Portal */
+.recruiter-theme {
+  --primary: #8b5cf6; /* Recruiter Purple/Violet */
+  --primary-dark: #6d28d9;
+  --primary-light: #c084fc;
+  --secondary: #0ea5e9; /* Professional Cyan */
+  --secondary-light: #38bdf8;
+  --recruiter-dark-bg: #050816; /* Deep midnight-blue recruiting background */
+}
+
+/* Prevent viewport scroll on large screens */
+@media (min-width: 1025px) {
+  .recruiter-theme.onboarding-split-container {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  .recruiter-theme .onboarding-left {
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 60px;
+  }
+
+  .recruiter-theme .onboarding-right {
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+}
+
+/* Left Section Theme Overrides */
+.recruiter-theme .onboarding-left {
+  background: var(--recruiter-dark-bg);
+  box-shadow: inset -30px 0 60px rgba(0, 0, 0, 0.4);
+}
+
+.recruiter-theme .admin-left-title {
+  font-size: 13px;
+  font-weight: 850;
+  color: var(--primary-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.recruiter-theme .admin-left-subtitle {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recruiter-theme .branding-subtext {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 440px;
+}
+
+.recruiter-theme .branding-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.recruiter-theme .feature-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.recruiter-theme .feature-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: var(--primary-light);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.25));
+}
+
+/* Glass Statistics Cards Override */
+.recruiter-theme .branding-stats-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.recruiter-theme .stats-glass-card {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.recruiter-theme .stats-glass-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(139, 92, 246, 0.15);
+  box-shadow: 0 16px 40px rgba(139, 92, 246, 0.2);
+}
+
+.recruiter-theme .stats-glass-card strong {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 850;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.recruiter-theme .stats-glass-card span {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Right Section Overrides & Spacing */
+.recruiter-theme .onboarding-form-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin: auto 0;
+}
+
+.recruiter-theme .onboarding-card {
+  padding: 36px;
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.04);
+}
+
+/* Back Button alignment and hover style */
+.recruiter-theme .back-to-portal-btn {
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  font-size: 13px;
+}
+
+/* Forms layout adjustment */
+.recruiter-theme .onboarding-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recruiter-theme .onboarding-header h2 {
+  font-size: 24px;
+  font-weight: 850;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.recruiter-theme .onboarding-header p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.recruiter-theme .auth-mode-tabs {
+  margin-bottom: 24px;
+  gap: 28px;
+  justify-content: center;
+  border-bottom: 1.5px solid #f1f5f9;
+}
+
+.recruiter-theme .auth-mode-tabs button {
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+/* Forms general input controls validation spacing */
+.recruiter-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.recruiter-theme .form-group label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.recruiter-theme .input-with-icon input,
+.recruiter-theme .form-group select {
+  height: 52px;
+  padding: 12px 16px 12px 46px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.recruiter-theme .input-with-icon svg {
+  font-size: 16px;
+  left: 16px;
+}
+
+/* Textarea customization */
+.recruiter-theme textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 14px;
+  height: 90px;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.recruiter-theme textarea:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.08);
+}
+
+/* Buttons and Options Row */
+.recruiter-theme .auth-primary-btn {
+  height: 52px;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.18);
+  margin-top: 6px;
+}
+
+.recruiter-theme .auth-primary-btn:hover {
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.25);
+}
+
+.recruiter-theme .auth-secondary-btn {
+  height: 52px;
+  border-radius: 12px;
+}
+
+.recruiter-theme .auth-options-row {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.recruiter-theme .remember-me {
+  font-size: 13px;
+}
+
+.recruiter-theme .text-link {
+  font-size: 13px;
+  font-weight: 750;
+}
+
+/* Stepper styles */
+.recruiter-theme .stepper-container {
+  margin-bottom: 32px;
+}
+
+.recruiter-theme .stepper-bar {
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+}
+
+.recruiter-theme .steps-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recruiter-theme .step-node {
+  gap: 6px;
+}
+
+.recruiter-theme .node-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  border-width: 3px;
+}
+
+.recruiter-theme .step-node span {
+  font-size: 10.5px;
+}
+
+/* Profile Photo Uploader */
+.profile-photo-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.profile-photo-uploader .photo-preview-box {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 3.5px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  color: #cbd5e1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-photo-uploader .photo-preview-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.15);
+}
+
+.photo-uploader-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.photo-action-btn {
+  height: 32px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 750;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.photo-action-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.photo-action-btn.danger {
+  color: #ef4444;
+  border-color: #fee2e2;
+  background: #fef2f2;
+}
+
+.photo-action-btn.danger:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+/* Verification details step layout */
+.admin-verification-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: rgba(139, 92, 246, 0.04);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-verification-card svg {
+  font-size: 24px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.admin-verification-card strong {
+  display: block;
+  font-size: 13.5px;
+  color: #1e1b4b;
+  margin-bottom: 2px;
+}
+
+.admin-verification-card p {
+  font-size: 11.5px;
+  color: #8b5cf6;
+  margin: 0;
+}
+
+.admin-review-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 18px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-review-grid span {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.admin-review-grid strong {
+  font-size: 12.5px;
+  color: #0f172a;
+  font-weight: 750;
+}
+
+/* Validation error labels positioning and animation */
+.validation-error-text {
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+  margin-bottom: 0;
+  animation: slide-down-fade-error 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.validation-error-text.center {
+  text-align: center;
+}
+
+@keyframes slide-down-fade-error {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Password Eye Button Alignment fix */
+.pass-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.25s;
+  padding: 0;
+  margin: 0;
+}
+
+.pass-toggle:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* Extra right padding on passwords to prevent text overflow behind eye icon */
+.input-with-icon input[type="password"] {
+  padding-right: 48px !important;
+}
+
+/* Custom form grid columns */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Form group wrapper when no icon is present */
+.form-group-input-wrap {
+  width: 100%;
+}
+
+.form-group-input-wrap input,
+.form-group-input-wrap select {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 14px;
+  height: 52px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group-input-wrap input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.08);
+}
+
+/* Enterprise Social login buttons design */
+.rec-social-login {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.social-btn {
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.social-btn svg {
+  font-size: 16px;
+}
+
+/* Google official branded button */
+.social-btn.google-btn {
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  color: #3c4043;
+}
+
+.social-btn.google-btn:hover {
+  background: #f8f9fa;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* LinkedIn official branded button */
+.social-btn.linkedin-btn {
+  background: #0077b5;
+  border: none;
+  color: #ffffff;
+}
+
+.social-btn.linkedin-btn:hover {
+  background: #006297;
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.25);
+}
+
+/* Terms alignment and sizing */
+.terms-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+/* Scrollbar configurations for Right form column */
+.recruiter-theme .onboarding-right {
+  overflow-y: auto;
+}
+
+/* Responsive configurations */
+@media (max-width: 1024px) {
+  .recruiter-theme.onboarding-split-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .recruiter-theme .onboarding-left {
+    padding: 40px 24px;
+    flex: 0 0 auto;
+  }
+
+  .recruiter-theme .onboarding-right {
+    padding: 24px 16px;
+    flex: 1 0 auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .recruiter-theme .onboarding-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+  
+  .recruiter-theme .back-to-portal-btn {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .recruiter-theme .branding-stats-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .recruiter-theme .stats-glass-card {
+    padding: 16px;
+  }
+
+  .recruiter-theme .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .recruiter-theme .steps-row span {
+    display: none;
+  }
+}
